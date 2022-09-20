@@ -1,0 +1,70 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+
+  link(rel='icon' type='image/x-icon' href='./cleverhare_fiverr.ico')
+  link(rel='stylesheet' href='./admin.css')
+  // --===== Iconscout CSS =====
+  link(rel='stylesheet' href='https://unicons.iconscout.com/release/v4.0.0/css/line.css')
+  // <title>Admin Dashboard Panel</title>
+nav
+  .logo-name
+    .logo-image
+      // <img src="images/logo.png" alt="">
+    span.logo_name Musathik
+  .menu-items
+    ul.nav-links
+      li
+        a(href='#')
+          i.uil.uil-estate
+          span.link-name Dahsboard
+    ul.logout-mode
+      li
+        a(href='/')
+          i.uil.uil-signout
+          span.link-name Logout
+      li.mode
+        a(href='#')
+          i.uil.uil-moon
+          span.link-name Dark Mode
+        .mode-toggle
+          span.switch
+section.dashboard
+  .top
+    i.uil.uil-bars.sidebar-toggle
+    // <img src="images/profile.jpg" alt="">
+  .dash-content
+    .overview
+      .title
+        i.uil.uil-tachometer-fast-alt
+        span.text Dashboard
+      .boxes
+        .box.box1
+          i.uil.uil-thumbs-up
+          span.text Total Users
+          span.number #{participants}
+        .box.box2
+          i.uil.uil-comments
+          span.text Total Downs
+          span.number 0
+        .box.box3
+          i.uil.uil-share
+          span.text Total Listens
+          span.number #{participants}
+    .activity
+      .title
+        i.uil.uil-clock-three
+        span.text Users Recieved
+      .activity-data
+        .data.names
+          span.data-title Name
+          each post in posts
+            span.data-list #{post.name}
+        .data.email
+          span.data-title Email
+          each email in posts
+            span.data-list #{email.email}
+
+script(src='./js/admin.js')

@@ -1,0 +1,40 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Music Player
+  link(rel='stylesheet' href='./style.css')
+  link(rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons')
+.wrapper
+  .top-bar
+    i.material-icons expand_more
+    span Now Playing
+    i.material-icons more_horiz
+  .img-area
+    img(src='' alt='')
+  .song-details
+    p.name
+    p.artist
+  .progress-area
+    .progress-bar
+      audio#main-audio(src='')
+    .song-timer
+      span.current-time 0:00
+      span.max-duration 0:00
+  .controls
+    i#repeat-plist.material-icons(title='Playlist looped') repeat
+    i#prev.material-icons skip_previous
+    .play-pause
+      i.material-icons.play play_arrow
+    i#next.material-icons skip_next
+    i#more-music.material-icons queue_music
+  .music-list
+    .header
+      .row
+        i.list.material-icons queue_music
+        span Music list
+      i#close.material-icons close
+    ul
+      // here li list are coming from js
+script(src='./js/music-list.js')
+script(src='./js/script.js')

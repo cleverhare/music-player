@@ -1,0 +1,54 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  // ===== Iconscout CSS =====
+  link(rel='stylesheet' href='https://unicons.iconscout.com/release/v4.0.0/css/line.css')
+  // ===== CSS =====
+  link(rel='stylesheet' href='./loginstyle.css')
+  title Login &amp; Registration Form
+.container
+  .forms
+    .form.login
+      span.title Login
+      form(action='/log' method='post')
+        .input-field
+          input(type='text' name="email" placeholder='Enter your email' required)
+          i.uil.uil-envelope.icon
+        .input-field
+          input.password(type='password' name='password' placeholder='Enter your password' required)
+          i.uil.uil-lock.icon
+          i.uil.uil-eye-slash.showHidePw
+        .checkbox-text
+          .checkbox-content
+            input#logCheck(type='checkbox')
+            label.text(for='logCheck') Remember me
+          a.text(href='#') Forgot password?
+        .input-field.button
+          input(type='submit' value='Login')
+      .login-signup
+        span.text
+          | Not a member?
+          a.text.signup-link(href='#') Signup Now
+    // Registration Form
+    .form.signup
+      span.title Registration
+      form(action='/reg' method="post")
+        .input-field
+          input(type='text' name='name' placeholder='Enter your name' required)
+          i.uil.uil-user
+        .input-field
+          input(type='text' name='email' placeholder='Enter your email' required)
+          i.uil.uil-envelope.icon
+        .input-field
+          input.password(type='password' name='password' placeholder='Enter a password' required)
+          i.uil.uil-lock.icon
+          i.uil.uil-eye-slash.showHidePw
+        .input-field.button
+          input(type='submit' value='Signup')
+      .login-signup
+        span.text
+          | Already a member?
+          a.text.login-link(href='#') Login Now
+script(src='./js/loginscript.js')
