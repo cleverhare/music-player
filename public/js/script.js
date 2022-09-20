@@ -232,3 +232,7 @@ function clicked(element){
   playMusic();
   playingSong();
 }
+let stat = localStorage.getItem("stat")
+if (stat != 'y') {
+  window.location.replace('/login')
+} 

@@ -32,3 +32,7 @@ const container = document.querySelector(".container"),
     login.addEventListener("click", ( )=>{
         container.classList.remove("active");
     });
+let logbtn = document.getElementById('log')
+logbtn.addEventListener("click",()=>{
+    localStorage.setItem("stat", "Y")
+})
