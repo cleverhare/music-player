@@ -53,7 +53,7 @@ function prevMusic(){
 
 //next music function
 function nextMusic(){
-  musicIndex++; //increment of musicIndex by 1
+  musicIndex+=1; //increment of musicIndex by 1
   //if musicIndex is greater than array length then musicIndex will be 1 so the first music play
   musicIndex > allMusic.length ? musicIndex = 1 : musicIndex = musicIndex;
   loadMusic(musicIndex);
@@ -175,7 +175,7 @@ closemoreMusic.addEventListener("click", ()=>{
 
 const ulTag = wrapper.querySelector("ul");
 // let create li tags according to array length for list
-for (let i = 0; i < allMusic.length; i++) {
+for (let i = 0; i < allMusic.length; i+=1) {
   //let's pass the song name, artist from the array
   let liTag = `<li li-index="${i + 1}">
                 <div class="row">
@@ -202,16 +202,141 @@ for (let i = 0; i < allMusic.length; i++) {
 }
 
 //play particular song from the list onclick of li tag
+
+if (localStorage.getItem("one") || localStorage.getItem("two") || localStorage.getItem("three") || localStorage.getItem("four") || localStorage.getItem("five") || localStorage.getItem("six")) {
+  let plays1 = parseInt(localStorage.getItem("one"))
+let plays2 = parseInt(localStorage.getItem("two"))
+let plays3 = parseInt(localStorage.getItem("three"))
+let plays4 = parseInt(localStorage.getItem("four"))
+let plays5 = parseInt(localStorage.getItem("five"))
+let plays6 = parseInt(localStorage.getItem("six"))
+  function playingSong(){
+    const allLiTag = ulTag.querySelectorAll("li");
+    
+    for (let j = 0; j < allLiTag.length; j+=1) {
+      let playpara = document.querySelector('.plays')
+      let audioTag = allLiTag[j].querySelector(".audio-duration");
+      if(allLiTag[j].classList.contains("playing")){
+        allLiTag[j].classList.remove("playing");
+        let adDuration = audioTag.getAttribute("t-duration");
+        audioTag.innerText = adDuration;
+        if (j==1) {
+          plays1+=1
+          localStorage.setItem("one", plays1)
+          let oneval = localStorage.getItem("one")
+          // alert("This isd me: "+oneval || "This is me: "+plays1)
+          playpara.innerHTML = "Plays: "+ oneval 
+        } 
+        if (j==2) {
+          plays2+=1
+          // playpara.innerHTML = plays2
+          localStorage.setItem("two", plays2)
+          let twoval = localStorage.getItem("two")
+          // alert("This isd me: "+oneval || "This is me: "+plays1)
+          playpara.innerHTML = "Plays: "+twoval 
+        } 
+        if (j==3) {
+          plays3+=1
+          localStorage.setItem("three", plays3)
+          let threeval = localStorage.getItem("three")
+          // alert("This isd me: "+oneval || "This is me: "+plays1)
+          playpara.innerHTML = "Plays: "+threeval 
+        } 
+        if (j==4) {
+          plays4+=1
+          localStorage.setItem("four", plays4)
+          let fourval = localStorage.getItem("four")
+          // alert("This isd me: "+oneval || "This is me: "+plays1)
+          playpara.innerHTML = "Plays: "+fourval 
+        } 
+        if (j==5) {
+          plays5+=1
+          localStorage.setItem("five", plays5)
+          let fiveval = localStorage.getItem("five")
+          // alert("This isd me: "+oneval || "This is me: "+plays1)
+          playpara.innerHTML = "Plays: "+fiveval 
+        } 
+        if (j==6) {
+          plays6+=1
+          playpara.innerHTML = plays6
+          localStorage.setItem("six", plays6)
+          let sixval = localStorage.getItem("six")
+          // alert("This isd me: "+oneval || "This is me: "+plays1)
+          playpara.innerHTML = "Plays: "+sixval 
+        } 
+      }
+  
+      //if the li tag index is equal to the musicIndex then add playing class in it
+      if(allLiTag[j].getAttribute("li-index") == musicIndex){
+        allLiTag[j].classList.add("playing");
+        audioTag.innerText = "Playing";
+      }
+  
+      allLiTag[j].setAttribute("onclick", "clicked(this)");
+    }
+  }
+}
+else{
+let plays1 = 0
+let plays2 = 0
+let plays3 = 0
+let plays4 = 0
+let plays5 = 0
+let plays6 = 0
 function playingSong(){
   const allLiTag = ulTag.querySelectorAll("li");
   
-  for (let j = 0; j < allLiTag.length; j++) {
+  for (let j = 0; j < allLiTag.length; j+=1) {
+    let playpara = document.querySelector('.plays')
     let audioTag = allLiTag[j].querySelector(".audio-duration");
-    
     if(allLiTag[j].classList.contains("playing")){
       allLiTag[j].classList.remove("playing");
       let adDuration = audioTag.getAttribute("t-duration");
       audioTag.innerText = adDuration;
+      if (j==1) {
+        plays1+=1
+        localStorage.setItem("one", plays1)
+        let oneval = localStorage.getItem("one")
+        // alert("This isd me: "+oneval || "This is me: "+plays1)
+        playpara.innerHTML = "Plays: "+ oneval 
+      } 
+      if (j==2) {
+        plays2+=1
+        // playpara.innerHTML = plays2
+        localStorage.setItem("two", plays2)
+        let twoval = localStorage.getItem("two")
+        // alert("This isd me: "+oneval || "This is me: "+plays1)
+        playpara.innerHTML = "Plays: "+twoval 
+      } 
+      if (j==3) {
+        plays3+=1
+        localStorage.setItem("three", plays3)
+        let threeval = localStorage.getItem("three")
+        // alert("This isd me: "+oneval || "This is me: "+plays1)
+        playpara.innerHTML = "Plays: "+threeval 
+      } 
+      if (j==4) {
+        plays4+=1
+        localStorage.setItem("four", plays4)
+        let fourval = localStorage.getItem("four")
+        // alert("This isd me: "+oneval || "This is me: "+plays1)
+        playpara.innerHTML = "Plays: "+fourval 
+      } 
+      if (j==5) {
+        plays5+=1
+        localStorage.setItem("five", plays5)
+        let fiveval = localStorage.getItem("five")
+        // alert("This isd me: "+oneval || "This is me: "+plays1)
+        playpara.innerHTML = "Plays: "+fiveval 
+      } 
+      if (j==6) {
+        plays6+=1
+        playpara.innerHTML = plays6
+        localStorage.setItem("six", plays6)
+        let sixval = localStorage.getItem("six")
+        // alert("This isd me: "+oneval || "This is me: "+plays1)
+        playpara.innerHTML = "Plays: "+sixval 
+      } 
     }
 
     //if the li tag index is equal to the musicIndex then add playing class in it
@@ -223,6 +348,8 @@ function playingSong(){
     allLiTag[j].setAttribute("onclick", "clicked(this)");
   }
 }
+}
+
 
 //particular li clicked function
 function clicked(element){
