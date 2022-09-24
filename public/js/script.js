@@ -363,3 +363,4 @@ let stat = localStorage.getItem("stat")
 if (stat != 'Y') {
   window.location.replace('/login')
 } 
+//Hope he will love it
