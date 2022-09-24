@@ -3,7 +3,7 @@ const mongoose = require("mongoose")
 const bodyparser = require('body-parser')
 const path = require("path");
 const app = express();
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 3300;
 const connection = mongoose.connection;
 require('./db/conn')
 
@@ -23,6 +23,9 @@ app.get('/', (req, res) => {
 })
 app.get('/login', (req, res) => {
   res.render('../public/login')
+})
+app.get('/video', (req, res) => {
+  res.render('../public/video')
 })
 app.post('/reg',  (req, res) => {
   // console.log(req.body)
