@@ -1,0 +1,30 @@
+Hi there, Here are the things which you have to do during the setup of this app in your home environment 
+So after downloading the ZIP file Run the following command. 
+
+Open Up a terminal and Write 
+1. npm i
+
+Then after It completes the operation 
+Run the following command 
+2. npm run dev
+
+if everything gone correct. You can see 2 message saying. 
+1. Congratulations the app is listening at Port 3300
+2. Connection Succesfull
+
+Once you see these messages. Open up any browser and go to 
+localhost:3300
+
+And one thing the admin panel is at localhost:3300:admin
+
+Go their to see the details of the people signed up to this app. 
+
+
+And bro genuinely speaking I did little bit late. Which I think I shouldn't do. But anyways I have given my best to serve 
+you better. So I hope this time everything will be done. And brother I request you. as I did in lill cheap price please please 
+if you can give me a good rating of 5 star. Thanks and as a compensation I would like to give you free support for 3 months 
+with this app. And also this is Halloween season. Think that the admin panel and this free support is your present for this 
+holiday. Okay
+Thanks 
+Yours sincerly
+Soumyajit

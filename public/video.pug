@@ -1,0 +1,50 @@
+doctype html
+head
+  meta(charset='utf-8')
+  title Custom Video Player JavaScript 
+  link(rel='stylesheet' href='./video.css')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  // These 3 links are only for icons
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css')
+  link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200')
+  link(rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons')
+h2.play Plays: 0
+.container.show-controls
+  .wrapper
+    .video-timeline
+      .progress-area
+        span 00:00
+        .progress-bar
+    ul.video-controls
+      li.options.left
+        button.volume
+          i.fa-solid.fa-volume-high
+        input(type='range' min='0' max='1' step='any')
+        .video-timer
+          p.current-time 00:00
+          p.separator  / 
+          p.video-duration 00:00
+      li.options.center
+        button.skip-backward
+          i.fas.fa-backward
+        button.play-pause
+          i.fas.fa-play
+        button.skip-forward
+          i.fas.fa-forward
+      li.options.right
+        .playback-content
+          button.playback-speed
+            span.material-symbols-rounded slow_motion_video
+          ul.speed-options
+            li(data-speed='2') 2x
+            li(data-speed='1.5') 1.5x
+            li.active(data-speed='1') Normal
+            li(data-speed='0.75') 0.75x
+            li(data-speed='0.5') 0.5x
+        button.pic-in-pic
+          span.material-icons picture_in_picture_alt
+        button.fullscreen
+          i.fa-solid.fa-expand
+
+  video(src='demo-video.mp4')
+script(src='./js/video.js')
