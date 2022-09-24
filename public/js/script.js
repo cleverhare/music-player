@@ -306,3 +306,9 @@ let stat = localStorage.getItem("stat")
 if (stat != 'Y') {
   window.location.replace('/login')
 }
+let sout = document.getElementById('sout')
+sout.addEventListener("click",()=>{
+  // alert("H")
+  localStorage.setItem("stat", "q")
+  window.location.reload()
+})
