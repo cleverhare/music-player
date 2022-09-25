@@ -29,16 +29,29 @@ function loadMusic(indexNumb){
 
 //play music function
 function playMusic(){
+  let play = document.querySelector('.plays')
+  let count = localStorage.getItem(musicIndex)
+  parseInt(count)
   wrapper.classList.add("paused");
+  count++
+  localStorage.setItem(musicIndex, count)
   playPauseBtn.querySelector("i").innerText = "pause";
   mainAudio.play();
+  play.innerHTML = `Plays: ${count}`
+
+  // alert( `I hit the button ${count} times`)
 }
 
 //pause music function
 function pauseMusic(){
+  // let play = document.querySelector('.plays')
+  // let count = localStorage.getItem(musicIndex)
   wrapper.classList.remove("paused");
+  // count++
   playPauseBtn.querySelector("i").innerText = "play_arrow";
   mainAudio.pause();
+  play.innerHTML = `Plays: ${count}`
+  // alert("I hit the button", count)
 }
 
 //prev music function
@@ -293,3 +306,9 @@ let stat = localStorage.getItem("stat")
 if (stat != 'Y') {
   window.location.replace('/login')
 }
+let sout = document.getElementById('sout')
+sout.addEventListener("click",()=>{
+  // alert("H")
+  localStorage.setItem("stat", "q")
+  window.location.reload()
+})

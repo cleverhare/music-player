@@ -135,3 +135,14 @@ mainVideo.addEventListener("pause", () => playPauseBtn.classList.replace("fa-pau
 playPauseBtn.addEventListener("click", () => mainVideo.paused ? mainVideo.play() : mainVideo.pause());
 videoTimeline.addEventListener("mousedown", () => videoTimeline.addEventListener("mousemove", draggableProgressBar));
 document.addEventListener("mouseup", () => videoTimeline.removeEventListener("mousemove", draggableProgressBar));
+let stat = localStorage.getItem("stat")
+// if (stat != 'y') {
+if (stat != 'Y') {
+  window.location.replace('/login')
+}
+let sout = document.getElementById('sout')
+sout.addEventListener("click",()=>{
+  // alert("H")
+  localStorage.setItem("stat", "q")
+  window.location.reload()
+})
