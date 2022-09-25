@@ -312,10 +312,14 @@ sout.addEventListener("click",()=>{
   // alert("H")
   localStorage.setItem("stat", "q")
   window.location.reload()
+
+})
+
 })
 
 }
 
 //Hope he will love it
+
 
 
