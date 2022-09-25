@@ -315,9 +315,8 @@ sout.addEventListener("click",()=>{
 
 })
 
-})
 
-}
+
 
 //Hope he will love it
 
