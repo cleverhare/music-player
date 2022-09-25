@@ -372,3 +372,7 @@ ul li.playing{
   pointer-events: none;
   color: var(--violet);
 }
+.heading{
+  color: white;
+  margin: 20px;
+}
