@@ -1,0 +1,36 @@
+Hi There, 
+	As you requested a guide to perform some basic operations. So here it is. 
+
+Here are the sollution to your doubts. 
+Follow these 
+
+1. How to change the title content of music page?
+=> First of all open the main folder ie, cftaxes-music after that go to the views folder and open the file saying index. 
+After that in the index file search for "h1.heading A Very Nice Music App" once found. Change the content to the one you like 
+for example "h1.heading Hello World". The heading will say hello world. I hope this doubt is cleared
+
+2. How to add more musics to this app ?
+=> To do this you have to go to the public folder and inside the public folder you have to go the js folder. Then find the 
+file saying music-list. After that Paste the following code 
+
+  {
+     name: "Here is the music name",
+     artist: "Here is the artist name",
+     img: "image name here - remember img must be in .jpg formate and it's inside the images folder of this project folder",
+    src: "music name here - remember img must be in .mp3 formate and it's inside the songs folder of this project folder"
+   }
+
+Replace the instruction with the data. Ideally on the img value enter the image/thumbnail name and same in the case of src 
+value. Okay. Thats all for this. 
+
+3. How to change the Video?
+=> First Download the video you like and after that. You should go to the public folder and there you just need to paste it
+And NOTE:- Make sure to rename the video to demo-video okay. 
+
+Thats all to change the video. 
+
+Thank You Very Much for checking it out. Expecting a short tip and a good review from your side. Anyways my goal is to satisfy 
+you. And once again Thank you very much.
+
+Yours sincerely
+Soumyajit(cleverhare)
