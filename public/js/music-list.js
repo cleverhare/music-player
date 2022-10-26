@@ -13,7 +13,7 @@ let allMusic = [
   {
     name: "Harley Bird - Home",
     artist: "Jordan Schor",
-    img: "music-1",
+    img: "DrWisq",
     src: "music-1",
     
   },
