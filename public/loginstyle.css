@@ -12,7 +12,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #4070f4;
+    background: url('./images/IMG_1811.JPG')center center/cover;
 }
 .container{
     position: relative;

@@ -25,7 +25,7 @@ body{
   /* justify-content: center; */
   min-height: 100vh;
   overflow-x: hidden;
-  background: linear-gradient(var(--pink) 0%, var(--violet) 100%);
+  background: url('./images/IMG_1811.JPG')center center/cover;
 }
 nav {
   display: flex;
@@ -373,6 +373,8 @@ ul li.playing{
   color: var(--violet);
 }
 .heading{
-  color: white;
+  color: #0075FF;
+  background-color: white;
+  padding: 30px;
   margin: 20px;
 }

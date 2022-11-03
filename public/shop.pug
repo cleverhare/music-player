@@ -1,0 +1,46 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  link(rel='stylesheet' href='./shop.css')
+  // Boxicons CDN Link
+  link(href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+.product-card
+  .logo-cart
+    // <img src="images/logo.jpg" alt="logo">
+    i.bx.bx-shopping-bag
+    i.bx.bxs-cart-alt 
+  .main-images
+    <img id="blue" class="blue active" src="./images/hoodie.png" alt="blue">
+  .shoe-details
+    span.shoe_name Super Hustler Hoodie
+    p
+      | Get a very nice super hustlers merchandised hoodie
+    .stars
+      i.bx.bxs-star
+      i.bx.bxs-star
+      i.bx.bxs-star
+      i.bx.bxs-star
+      i.bx.bx-star
+  .color-price
+    .color-option
+      span.color Colour:
+      .circles
+        span#blue.circle.blue.active
+    .price
+      span.price_num $40.00
+      span.price_letter Fourty dollar only
+  .button
+    .button-layer
+    button Add To Cart
+script.
+  let circle = document.querySelector(".color-option");
+  circle.addEventListener("click", (e)=>{
+  let target = e.target;
+  if(target.classList.contains("circle")){
+  circle.querySelector(".active").classList.remove("active");
+  target.classList.add("active");
+  document.querySelector(".main-images .active").classList.remove("active");
+  document.querySelector(`.main-images .${target.id}`).classList.add("active");
+  }
+  });

@@ -27,6 +27,9 @@ app.get('/login', (req, res) => {
 app.get('/video', (req, res) => {
   res.render('../public/video')
 })
+app.get('/shop', (req, res) => {
+  res.render('../public/shop')
+})
 app.post('/reg',  (req, res) => {
   // console.log(req.body)
     const usermail = req.body.email
