@@ -8,7 +8,7 @@
 }
 body{
   min-height: 100vh;
-  background: #E3F2FD;
+  background: url('./images/IMG_1811.JPG')center center/cover;
   flex-direction: column;
 }
 body, .container, .video-controls, .video-timer, .options{
