@@ -56,7 +56,7 @@ let allMusic = [
     name: "One Love",
     artist: "One Love",
     // img: "image0",
-    src: "music-6",
+    src: "music-7",
     
   },
   {
