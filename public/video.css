@@ -110,6 +110,10 @@ ul li a.active {
 @media screen and (max-width: 768px) {
   nav {
       border-bottom: 1px solid #455468;
+      margin-top: 0;
+      position: relative;
+      top: 0;
+      margin-top: -150px;
   }
 
   ul {
@@ -121,7 +125,7 @@ ul li a.active {
       top: 0;
       text-align: center;
       display: none;
-      margin-top: 71px;
+      /* margin-top: 71px; */
   }
 
   ul li {
@@ -140,6 +144,15 @@ ul li a.active {
 
   #checkbox:checked~ul {
       display: block;
+  }
+  .container{
+    margin-top: 150px;
+  }
+  h2{
+    background: white;
+    padding: 20px;
+    border-radius: 9px;
+    box-shadow: 2px 3px 4px #00000047;
   }
 }
 .container{
