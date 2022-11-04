@@ -152,6 +152,9 @@ ul li a.active {
   #checkbox:checked~ul {
       display: block;
   }
+  .wrapper{
+    margin: 100px 0;
+  }
 }
 
 .wrapper{
